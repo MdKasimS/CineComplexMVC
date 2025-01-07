@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using System.Web;
 
 namespace CineComplex_MVC.Controllers
 {
@@ -16,12 +17,19 @@ namespace CineComplex_MVC.Controllers
         }
 
         // GET: /HelloWorld/Welcome
+        [HttpGet("Home/Welcome")]
         public string Welcome()
         {
             return "This is the Welcome action method...";
         }
 
-       
+        // GET: /HelloWorld/Welcome?name=someStringValue?numTimes=someIntegerValue
+        [HttpGet("Home/Welcome/{name}/{numTimes}")]
+        public string Welcome(string name, int numTimes = 1)
+        {
+            return HttpUtility.HtmlEncode($"This is {name} clicks {numTimes} times");
+        }
+
     }
 }
 
