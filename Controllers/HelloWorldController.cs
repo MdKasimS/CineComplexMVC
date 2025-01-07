@@ -6,7 +6,7 @@ namespace CineComplex_MVC.Controllers
     public class HelloWorldController : Controller
     {
         // GET: /HelloWorld
-        public IActionResult InAdex()
+        public IActionResult Index()
         {
             return View();
         }
