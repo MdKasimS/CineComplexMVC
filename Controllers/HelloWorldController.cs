@@ -9,14 +9,20 @@ namespace CineComplex_MVC.Controllers
         //    return View();
         //}
 
+        // GET: /HelloWorld
         public string Index()
         {
             return "This is my <b>Default</b> action.";
         }
 
+        // GET: /HelloWorld/Welcome
         public string Welcome()
         {
             return "This is the Welcome action method...";
         }
+
+       
     }
 }
+
+
