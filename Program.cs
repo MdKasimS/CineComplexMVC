@@ -1,6 +1,21 @@
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+/*
+ * In an ASP.NET Core MVC application, the line builder.Services.AddControllersWithViews(); 
+ * is used to register the MVC services with the Dependency Injection (DI) container. 
+ * Here’s what it does in detail:
+ *  1. Register MVC Services:
+ *      AddControllersWithViews() registers the services required for MVC controllers and views. 
+ *      This includes services for model binding, action filters, validation, and more.
+ *  2. Enable MVC Framework:
+        It sets up the MVC framework so that you can use controllers and views in your application. 
+        This is essential for handling HTTP requests and rendering views.
+   
+ * When you add this line in the Program.cs file, it ensures that your application can recognize and use controllers and views
+ * and can be used to handle requests and render responses.
+
+ */
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
