@@ -32,8 +32,7 @@ namespace CineComplex_MVC.Controllers
             string htmlContent = "This is the Welcome action method...";
             return Content(htmlContent, "text/html");
         }
-    }
-}
+
 
         /*
          * Method overloading is a fundamental concept in many programming languages, allowing for multiple methods with the same name 
@@ -47,13 +46,14 @@ namespace CineComplex_MVC.Controllers
          */
 
         // GET: /HelloWorld/Welcome?name=someStringValue?numTimes=someIntegerValue
-        //[HttpGet("HelloWorld/Welcome/{name}/{numTimes}")]
-        //public string Welcome(string name, int numTimes = 1)
-        //{
-        //    return HttpUtility.HtmlEncode($"This is {name} clicks {numTimes} times");
-        //}
+        [HttpGet("HelloWorld/Welcome/{name}/{numTimes}")]
+        public string Welcome(string name, int numTimes = 1)
+        {
+            return HttpUtility.HtmlEncode($"This is {name} clicks {numTimes} times");
+        }
 
-
+    }
+}
 
 
 
