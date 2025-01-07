@@ -6,17 +6,17 @@ namespace CineComplex_MVC.Controllers
     public class HelloWorldController : Controller
     {
         // GET: /HelloWorld
-        //public IActionResult Index()
-        //{
-        //    return View();
-        //}
+        public IActionResult InAdex()
+        {
+            return View();
+        }
 
         // GET: /HelloWorld
-        public IActionResult Index()
-        {
-            string htmlContent = "This is my <b>Default</b> action in custome Index().";
-            return Content(htmlContent, "text/html");
-        }
+        //public IActionResult Index()
+        //{
+        //    string htmlContent = "This is my <b>Default</b> action in custome Index().";
+        //    return Content(htmlContent, "text/html");
+        //}
 
         // GET: /HelloWorld/Welcome
         //[HttpGet("HelloWorld/Welcome")]
