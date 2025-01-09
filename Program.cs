@@ -1,13 +1,16 @@
 using CineComplex_MVC.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<MovieDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("MovieDbContext") ?? throw new InvalidOperationException("Connection string 'MovieDbContext' not found.")));
 
 // Add services to the container.
 /*
  * In an ASP.NET Core MVC application, the line builder.Services.AddControllersWithViews(); 
  * is used to register the MVC services with the Dependency Injection (DI) container. 
- * Here’s what it does in detail:
+ * Hereï¿½s what it does in detail:
  *  1. Register MVC Services:
  *      AddControllersWithViews() registers the services required for MVC controllers and views. 
  *      This includes services for model binding, action filters, validation, and more.
@@ -22,7 +25,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 // Register your DbContext with the connection string
-builder.Services.AddDbContext<MovieDBContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+builder.Services.AddDbContext<CineComplex_MVC.Models.MovieDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 
 var app = builder.Build();
