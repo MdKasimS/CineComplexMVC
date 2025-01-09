@@ -6,6 +6,8 @@ namespace CineComplex_MVC.Controllers
     public class HelloWorldController : Controller
     {
         // GET: /HelloWorld
+
+        static int num = 5;
         public IActionResult Index()
         {
             return View();
@@ -46,10 +48,11 @@ namespace CineComplex_MVC.Controllers
          */
 
         // GET: /HelloWorld/Welcome?name=someStringValue?numTimes=someIntegerValue
-        [HttpGet("HelloWorld/Welcome/{name}/{numTimes}")]
-        public string Welcome(string name, int numTimes = 1)
+        //[HttpGet("HelloWorld/Welcome2/{name}/{numTimes}")]
+        public string Welcome2(string name, int numTimes = 1)
         {
-            return HttpUtility.HtmlEncode($"This is {name} clicks {numTimes} times");
+            num += numTimes;
+            return HttpUtility.HtmlEncode($"This is {name} clicks {num} times");
         }
 
     }
