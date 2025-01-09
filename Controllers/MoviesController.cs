@@ -21,7 +21,7 @@ namespace CineComplex_MVC.Controllers
         // GET: Movies
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Movie.ToListAsync());
+            return View(await _context.Movies.ToListAsync());
         }
 
         // GET: Movies/Details/5
@@ -32,7 +32,7 @@ namespace CineComplex_MVC.Controllers
                 return NotFound();
             }
 
-            var movie = await _context.Movie
+            var movie = await _context.Movies
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (movie == null)
             {
@@ -72,7 +72,7 @@ namespace CineComplex_MVC.Controllers
                 return NotFound();
             }
 
-            var movie = await _context.Movie.FindAsync(id);
+            var movie = await _context.Movies.FindAsync(id);
             if (movie == null)
             {
                 return NotFound();
@@ -123,7 +123,7 @@ namespace CineComplex_MVC.Controllers
                 return NotFound();
             }
 
-            var movie = await _context.Movie
+            var movie = await _context.Movies
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (movie == null)
             {
@@ -138,10 +138,10 @@ namespace CineComplex_MVC.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var movie = await _context.Movie.FindAsync(id);
+            var movie = await _context.Movies.FindAsync(id);
             if (movie != null)
             {
-                _context.Movie.Remove(movie);
+                _context.Movies.Remove(movie);
             }
 
             await _context.SaveChangesAsync();
@@ -150,7 +150,7 @@ namespace CineComplex_MVC.Controllers
 
         private bool MovieExists(int id)
         {
-            return _context.Movie.Any(e => e.Id == id);
+            return _context.Movies.Any(e => e.Id == id);
         }
     }
 }
