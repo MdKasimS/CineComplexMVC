@@ -1,7 +1,12 @@
-﻿
-@{
+﻿@{
     ViewData["Title"] = "Welcome";
 }
 
-<h1>Welcome</h1>
+<ul>
+
+    @for (int i = 0; i < int.Parse(ViewData["checks"].ToString()); ++i)
+    {
+        <li>Hi @ViewData["name"]! @ViewData["Title"]</li>
+    }
+</ul>
 

@@ -33,6 +33,7 @@ namespace CineComplex_MVC.Controllers
         {
             //string htmlContent = "This is the Welcome action method...";
             //return Content(htmlContent, "text/html");
+
             ViewData["checks"] = numTimes;
             ViewData["name"] = name;
             return View();
