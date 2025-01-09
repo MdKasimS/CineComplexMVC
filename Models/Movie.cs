@@ -6,6 +6,7 @@ namespace CineComplex_MVC.Models
 {
     public class MovieDBContext : DbContext
     {
+        public MovieDBContext(DbContextOptions<MovieDBContext> options) : base(options) { }
         public DbSet<Movie> Movies { get; set; }
     }
         public class Movie

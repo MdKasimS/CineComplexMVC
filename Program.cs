@@ -1,3 +1,6 @@
+using CineComplex_MVC.Models;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -17,6 +20,10 @@ var builder = WebApplication.CreateBuilder(args);
 
  */
 builder.Services.AddControllersWithViews();
+
+// Register your DbContext with the connection string
+builder.Services.AddDbContext<MovieDBContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
 
 var app = builder.Build();
 
