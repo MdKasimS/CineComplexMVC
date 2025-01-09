@@ -4,9 +4,9 @@ using System.Security.Cryptography;
 
 namespace CineComplex_MVC.Models
 {
-    public class MovieDBContext : DbContext
+    public class MovieDbContext : DbContext
     {
-        public MovieDBContext(DbContextOptions<MovieDBContext> options) : base(options) { }
+        public MovieDbContext(DbContextOptions<MovieDbContext> options) : base(options) { }
         public DbSet<Movie> Movies { get; set; }
     }
         public class Movie
