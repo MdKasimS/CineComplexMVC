@@ -28,11 +28,14 @@ namespace CineComplex_MVC.Controllers
         //}
 
         // GET: /HelloWorld/Welcome
-        [HttpGet("HelloWorld/Welcome")]
-        public IActionResult Welcome()
+        //[HttpGet("HelloWorld/Welcome")]
+        public IActionResult Welcome(string name, int numTimes = 1)
         {
-            string htmlContent = "This is the Welcome action method...";
-            return Content(htmlContent, "text/html");
+            //string htmlContent = "This is the Welcome action method...";
+            //return Content(htmlContent, "text/html");
+            ViewData["checks"] = numTimes;
+            ViewData["name"] = name;
+            return View();
         }
 
 
@@ -52,6 +55,7 @@ namespace CineComplex_MVC.Controllers
         public string Welcome2(string name, int numTimes = 1)
         {
             num += numTimes;
+            ViewData["Clicks"] = num;
             return HttpUtility.HtmlEncode($"This is {name} clicks {num} times");
         }
 
