@@ -13,6 +13,7 @@ namespace CineComplex_MVC.Controllers
     {
         private readonly MovieDbContext _context;
 
+        //Here the Controller connects with Models 
         public MoviesController(MovieDbContext context)
         {
             _context = context;

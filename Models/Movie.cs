@@ -9,6 +9,8 @@ namespace CineComplex_MVC.Models
         public MovieDbContext(DbContextOptions<MovieDbContext> options) : base(options) { }
         public DbSet<Movie> Movies { get; set; }
     }
+
+
         public class Movie
     {
         public int Id { get ; set ; }
