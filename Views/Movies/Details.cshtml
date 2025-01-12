@@ -37,6 +37,8 @@
     </dl>
 </div>
 <div>
+   @*  The asp-action attribute specifies the action method in the controller that the link should point to. 
+    In this case, it is set to "Edit", meaning it will generate a URL that navigates to the Edit action method. *@
     <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
     <a asp-action="Index">Back to List</a>
 </div>
