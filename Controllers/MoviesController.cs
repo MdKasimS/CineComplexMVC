@@ -153,5 +153,17 @@ namespace CineComplex_MVC.Controllers
         {
             return _context.Movies.Any(e => e.Id == id);
         }
+
+        public async Task<IActionResult> SearchIndex(string searchString)
+        {
+            IQueryable<Movie> movies = from m in _context.Movies select m;
+
+            if(!String.IsNullOrEmpty(searchString))
+            {
+                movies = movies.Where(s => s.Title.Contains(searchString));
+            }
+
+            return View(movies);
+        }
     }
 }
