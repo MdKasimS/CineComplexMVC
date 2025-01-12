@@ -6,7 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 // hosts our ASP.NET Core Web Application.
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<MovieDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("MovieDbContext") ?? throw new InvalidOperationException("Connection string 'MovieDbContext' not found.")));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'MovieDbContext' not found.")));
 
 // Add services to the container.
 /*
