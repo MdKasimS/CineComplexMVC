@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using CineComplex_MVC.Models;
+using Microsoft.IdentityModel.Tokens;
 
 namespace CineComplex_MVC.Controllers
 {
@@ -154,13 +155,25 @@ namespace CineComplex_MVC.Controllers
             return _context.Movies.Any(e => e.Id == id);
         }
 
-        public async Task<IActionResult> SearchIndex(string searchString)
+        //public async Task<IActionResult> SearchIndex(string searchString)
+        //{
+        //    IQueryable<Movie> movies = from m in _context.Movies select m;
+
+        //    if(!String.IsNullOrEmpty(searchString))
+        //    {
+        //        movies = movies.Where(s => s.Title.Contains(searchString));
+        //    }
+
+        //    return View(movies);
+        //}
+
+        public async Task<IActionResult> SearchIndex(int id)
         {
             IQueryable<Movie> movies = from m in _context.Movies select m;
 
-            if(!String.IsNullOrEmpty(searchString))
+            if (id!=0)
             {
-                movies = movies.Where(s => s.Title.Contains(searchString));
+                movies = movies.Where(s => s.Id == id);
             }
 
             return View(movies);
