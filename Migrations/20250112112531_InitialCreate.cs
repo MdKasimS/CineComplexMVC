@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace CineComplex_MVC.Migrations
+namespace CineComplexAdminMVC.Migrations
 {
     /// <inheritdoc />
     public partial class InitialCreate : Migration

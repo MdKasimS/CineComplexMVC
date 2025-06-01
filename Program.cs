@@ -1,4 +1,4 @@
-using CineComplex_MVC.Models;
+using CineComplexAdminMVC.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -27,7 +27,7 @@ builder.Services.AddDbContext<MovieDbContext>(options =>
 builder.Services.AddControllersWithViews();
 
 // Register your DbContext with the connection string
-builder.Services.AddDbContext<CineComplex_MVC.Models.MovieDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+builder.Services.AddDbContext<CineComplexAdminMVC.Models.MovieDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 
 var app = builder.Build();

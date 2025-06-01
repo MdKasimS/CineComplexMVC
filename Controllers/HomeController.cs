@@ -1,8 +1,8 @@
-using CineComplex_MVC.Models;
+using CineComplexAdminMVC.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
-namespace CineComplex_MVC.Controllers
+namespace CineComplexAdminMVC.Controllers
 {
     
     public class HomeController : Controller

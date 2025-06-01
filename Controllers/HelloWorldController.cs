@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Web;
 
-namespace CineComplex_MVC.Controllers
+namespace CineComplexAdminMVC.Controllers
 {
     public class HelloWorldController : Controller
     {

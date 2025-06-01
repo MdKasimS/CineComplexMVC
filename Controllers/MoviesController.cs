@@ -5,10 +5,10 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using CineComplex_MVC.Models;
+using CineComplexAdminMVC.Models;
 using Microsoft.IdentityModel.Tokens;
 
-namespace CineComplex_MVC.Controllers
+namespace CineComplexAdminMVC.Controllers
 {
     public class MoviesController : Controller
     {

@@ -1,4 +1,4 @@
-namespace CineComplex_MVC.Models
+namespace CineComplexAdminMVC.Models
 {
     public class ErrorViewModel
     {
