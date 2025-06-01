@@ -4,6 +4,7 @@ using System.Diagnostics;
 
 namespace CineComplex_MVC.Controllers
 {
+    
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -24,6 +25,8 @@ namespace CineComplex_MVC.Controllers
          *  
          *  
          */
+        [Route("admin/home")]
+
         public IActionResult Index()
         {
             return View();
