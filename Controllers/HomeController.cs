@@ -25,8 +25,6 @@ namespace CineComplex_MVC.Controllers
          *  
          *  
          */
-        [Route("admin/home")]
-
         public IActionResult Index()
         {
             return View();
