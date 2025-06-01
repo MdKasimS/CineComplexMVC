@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CineComplexMVC", "CineCompl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CineComplexUserMVC", "..\CineComplexUserMVC\CineComplexUserMVC.csproj", "{1BBC3F5B-04D5-07AE-CA0C-5B69E0A85011}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CineComplexPartnerMVC", "..\CineComplexPartnerMVC\CineComplexPartnerMVC.csproj", "{92006DE2-4B1C-47B1-8D17-3F6F55C09DE7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{1BBC3F5B-04D5-07AE-CA0C-5B69E0A85011}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1BBC3F5B-04D5-07AE-CA0C-5B69E0A85011}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1BBC3F5B-04D5-07AE-CA0C-5B69E0A85011}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92006DE2-4B1C-47B1-8D17-3F6F55C09DE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92006DE2-4B1C-47B1-8D17-3F6F55C09DE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92006DE2-4B1C-47B1-8D17-3F6F55C09DE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92006DE2-4B1C-47B1-8D17-3F6F55C09DE7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
