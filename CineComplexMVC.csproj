@@ -18,4 +18,9 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.7" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\CineComplexPartnerMVC\CineComplexPartnerMVC.csproj" />
+    <ProjectReference Include="..\CineComplexUserMVC\CineComplexUserMVC.csproj" />
+  </ItemGroup>
+
 </Project>
